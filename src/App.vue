@@ -8,11 +8,24 @@
       </NavItem>
 
       <NavItem>
-        <template #icon>X</template>
+        <template #icon>
+          <Bell/>
+        </template>
       </NavItem>
 
       <NavItem>
-        <template #icon>X</template>
+        <template #icon>
+          <Messenger/>
+        </template>
+      </NavItem>
+
+      <NavItem>
+        <template #icon>
+          <Caret/>
+        </template>
+        <template #dropdown>
+          <!-- <p>Toggle</p> -->
+        </template>
       </NavItem>
     </NavBar>
   </div>
@@ -22,6 +35,9 @@
 import NavBar from './components/NavBar';
 import NavItem from './components/NavItem';
 import Arrow from './components/icons/Arrow';
+import Bell from './components/icons/Bell';
+import Messenger from './components/icons/Messenger';
+import Caret from './components/icons/Caret';
 
 export default {
   name: 'App',
@@ -29,6 +45,9 @@ export default {
     NavBar,
     NavItem,
     Arrow,
+    Bell,
+    Messenger,
+    Caret,
   },
 };
 </script>
