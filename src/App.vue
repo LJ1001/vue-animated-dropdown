@@ -2,7 +2,9 @@
   <div id="app">
     <NavBar>
       <NavItem>
-        <template #icon>X</template>
+        <template #icon>
+          <Arrow/>
+        </template>
       </NavItem>
 
       <NavItem>
@@ -19,12 +21,14 @@
 <script>
 import NavBar from './components/NavBar';
 import NavItem from './components/NavItem';
+import Arrow from './components/icons/Arrow';
 
 export default {
   name: 'App',
   components: {
     NavBar,
     NavItem,
+    Arrow,
   },
 };
 </script>
