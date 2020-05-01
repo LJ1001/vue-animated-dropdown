@@ -24,7 +24,7 @@
           <Caret/>
         </template>
         <template #dropdown>
-          <!-- <p>Toggle</p> -->
+          <DropdownMenu />
         </template>
       </NavItem>
     </NavBar>
@@ -34,6 +34,7 @@
 <script>
 import NavBar from './components/NavBar';
 import NavItem from './components/NavItem';
+import DropdownMenu from './components/DropdownMenu';
 import Arrow from './components/icons/Arrow';
 import Bell from './components/icons/Bell';
 import Messenger from './components/icons/Messenger';
@@ -44,6 +45,7 @@ export default {
   components: {
     NavBar,
     NavItem,
+    DropdownMenu,
     Arrow,
     Bell,
     Messenger,
