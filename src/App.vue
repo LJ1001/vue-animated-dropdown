@@ -1,16 +1,30 @@
 <template>
   <div id="app">
-    <HelloWorld/>
+    <NavBar>
+      <NavItem>
+        <template #icon>X</template>
+      </NavItem>
+
+      <NavItem>
+        <template #icon>X</template>
+      </NavItem>
+
+      <NavItem>
+        <template #icon>X</template>
+      </NavItem>
+    </NavBar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import NavBar from './components/NavBar';
+import NavItem from './components/NavItem';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    NavBar,
+    NavItem,
   },
 };
 </script>
