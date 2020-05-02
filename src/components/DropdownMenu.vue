@@ -3,7 +3,7 @@
               border border-gray-700 border-p-4 rounded-lg flex transition-heigth duration-500"
        :style="{height: menuHeight + 'px'}">
     <transition name="menu-primary" @enter="calcHeight">
-      <div v-if="activeMenu === 'main'">
+      <div v-if="activeMenu === 'main'" ref="mainManu">
         <DropdownItem>
           <template>
             My Profile
@@ -75,6 +75,9 @@ export default {
       activeMenu: 'main',
       menuHeight: null,
     };
+  },
+  mounted() {
+    this.menuHeight = this.$refs.mainManu.offsetHeight;
   },
   methods: {
     setActiveMenu(menu) {
