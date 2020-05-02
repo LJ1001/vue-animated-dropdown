@@ -1,7 +1,8 @@
 <template>
   <div class="absolute w-64 custom-top custom-transform bg-gray-800 overflow-hidden
-              border border-gray-700 border-p-4 rounded-lg flex">
-    <transition name="menu-primary">
+              border border-gray-700 border-p-4 rounded-lg flex transition-heigth duration-500"
+       :style="{height: menuHeight + 'px'}">
+    <transition name="menu-primary" @enter="calcHeight">
       <div v-if="activeMenu === 'main'">
         <DropdownItem>
           <template>
@@ -23,11 +24,26 @@
       </div>
     </transition>
 
-    <transition name="menu-secondary">
+    <transition name="menu-secondary" @enter="calcHeight">
       <div v-if="activeMenu === 'settings'">
         <DropdownItem @click.native="setActiveMenu('main')">
           <template #leftIcon>
             <Arrow />
+          </template>
+        </DropdownItem>
+        <DropdownItem >
+          <template>
+            Settings
+          </template>
+        </DropdownItem>
+        <DropdownItem >
+          <template>
+            Settings
+          </template>
+        </DropdownItem>
+        <DropdownItem >
+          <template>
+            Settings
           </template>
         </DropdownItem>
         <DropdownItem >
@@ -57,11 +73,16 @@ export default {
   data() {
     return {
       activeMenu: 'main',
+      menuHeight: null,
     };
   },
   methods: {
     setActiveMenu(menu) {
       this.activeMenu = menu;
+    },
+    calcHeight(el) {
+      const height = el.offsetHeight;
+      this.menuHeight = height;
     },
   },
 };

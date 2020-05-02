@@ -2,9 +2,13 @@ module.exports = {
   purge: [],
   theme: {
     fill: theme => ({
-      'base': '#dadce1'
+      'base': '#dadce1',
     }),
-    extend: {},
+    extend: {
+      transitionProperty: {
+       'height': 'height',
+      },
+    },
   },
   variants: {},
   plugins: [],
