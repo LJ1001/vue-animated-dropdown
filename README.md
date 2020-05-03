@@ -5,7 +5,7 @@ This is an animated dropdown written in Vue.js based on the [Animated Dropdown F
 The styling of components is made via [Tailwindcss](https://tailwindcss.com/). PurgeCSS is not configured so the production CSS file is pretty big.
 Transitions are done via tailwind [helper classes](https://tailwindcss.com/docs/transition-property) or via the built in [Vue transition component](https://vuejs.org/v2/guide/transitions.html#Overview).
 
-Maybe you can 
+Some UI elements do not have the exact same styling as in the video but you could easily tweak thhe UI via the [tailwind config file](https://tailwindcss.com/docs/configuration/#apps).
 
 ## Build Setup
 
